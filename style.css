@@ -139,3 +139,14 @@ a:hover {
     font-size: 0.8rem;
     color: #666;
 }
+
+/* style.css の最下部に追加してください */
+
+/* 画像がない場合のスタイル */
+.work-image-container.no-image {
+    background-color: #0000FF; /* 青色で塗りつぶし */
+    /* no-imageの場合は、テキストをより見やすくするために調整しても良い */
+    display: flex; /* テキストオーバーレイを中央に配置する場合 */
+    align-items: flex-end; /* 下端に寄せる */
+    justify-content: flex-start; /* 左端に寄せる */
+}
