@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "作品タイトル 01",
+        "description": "この作品の簡単な説明文が入ります。使用技術やコンセプトなどを記述。",
+        "imageUrl": "img/work01.jpg",
+        "linkUrl": "https://example.com/work01"
+    },
+    {
+        "id": 2,
+        "title": "作品タイトル 02",
+        "description": "これは2つ目の作品の説明です。JSONにデータを追加するだけで簡単に反映されます！",
+        "imageUrl": "img/work02.jpg",
+        "linkUrl": "https://example.com/work02"
+    },
+    {
+        "id": 3,
+        "title": "最新作品のタイトル",
+        "description": "JSONの一番上に新しい作品を追加すると、サイトのトップに表示されます。",
+        "imageUrl": "img/work03.jpg",
+        "linkUrl": "https://example.com/work03"
+    }
+]
