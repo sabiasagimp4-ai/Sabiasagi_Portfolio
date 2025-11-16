@@ -11,6 +11,9 @@ body {
     color: #333;
     line-height: 1.6;
     overflow-x: hidden;
+    
+    /* ★修正点★: 固定ヘッダーのためのパディングを削除 */
+    padding-top: 0; 
 }
 
 a {
@@ -23,11 +26,18 @@ a:hover {
     color: #888;
 }
 
-/* ヘッダーセクション */
+/* ★ヘッダーセクション (固定解除)★ */
 .site-header {
     width: 100%;
-    padding: 80px 50px 0;
-    margin-bottom: 50px;
+    /* ★修正点★: 固定解除 (デフォルトの状態に戻す) */
+    position: static; 
+    top: auto; 
+    z-index: auto; 
+    background-color: #f8f8f8; 
+    
+    /* 元の padding と margin-bottom に戻す */
+    padding: 80px 50px 0; 
+    margin-bottom: 50px; 
 }
 
 .header-content {
@@ -37,6 +47,9 @@ a:hover {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    /* 固定解除に伴い、追加した padding-bottom と border-bottom を削除 */
+    padding-bottom: 0; 
+    border-bottom: none; 
 }
 
 .profile-info {
@@ -102,12 +115,12 @@ a:hover {
 }
 
 
-/* --- メインコンテンツと作品グリッドの修正 --- */
+/* --- メインコンテンツと作品グリッド (画像重視) --- */
 
 .main-container {
     max-width: 1400px;
     margin: 0 auto;
-    /* 左右の余白を減らす */
+    /* 左右の余白を狭くする */
     padding: 0 20px 80px; 
 }
 
@@ -115,7 +128,7 @@ a:hover {
     display: grid;
     /* 1列あたりの最小幅を広くし、画像を大きく見せる */
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    /* ★修正点★: グリッド間の余白を2pxに */
+    /* グリッド間の余白を2pxに */
     gap: 2px; 
 }
 
@@ -123,7 +136,6 @@ a:hover {
 .work-item {
     display: flex;
     flex-direction: column;
-    /* グリッドの余白が狭いため、アイテム自体の余白をなくす */
     margin: 0;
     padding: 0;
 }
@@ -134,12 +146,11 @@ a:hover {
 
 .work-image-wrapper {
     width: 100%;
-    /* ★修正点★: アスペクト比を正方形 (1:1) にする */
+    /* 16:9 のアスペクト比 */
     padding-bottom: 56.25%; 
     position: relative;
     overflow: hidden;
     background-color: #e0e0e0; 
-    /* 画像下にテキストがないため、このマージンは不要か非常に小さくする */
     margin-bottom: 0; 
 }
 
@@ -172,7 +183,7 @@ a:hover {
     letter-spacing: 0.1em;
 }
 
-/* --- ホバーオーバーレイのスタイル追加 --- */
+/* --- ホバーオーバーレイのスタイル --- */
 
 .hover-overlay {
     position: absolute;
@@ -180,18 +191,18 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* 半透明の黒背景 */
+    background-color: rgba(0, 0, 0, 0.6); 
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* 下に寄せる */
+    justify-content: flex-end; 
     padding: 20px;
-    opacity: 0; /* デフォルトは非表示 */
+    opacity: 0; 
     transition: opacity 0.3s ease;
 }
 
 .work-link:hover .hover-overlay {
-    opacity: 1; /* ホバーで表示 */
+    opacity: 1; 
 }
 
 .overlay-title {
@@ -204,10 +215,6 @@ a:hover {
     font-size: 0.9rem;
     color: #ccc;
 }
-
-
-/* --- 画像下に表示されていたテキストの削除 (今回はオーバーレイに集約) --- */
-/* .work-text-content, .work-title, .work-date, .work-description は削除されるため、CSSからも削除します */
 
 
 /* フッター */
@@ -225,12 +232,23 @@ a:hover {
 
 /* レスポンシブ対応 */
 @media (max-width: 900px) {
+    /* 固定解除に伴い、モバイルの body パディングも削除 */
+    body {
+        padding-top: 0;
+    }
+
+    .site-header {
+        /* モバイルでのヘッダーパディングを調整 */
+        padding: 30px 10px 0; 
+        margin-bottom: 30px;
+    }
+
     .header-content {
         flex-direction: column;
         align-items: flex-start;
     }
     .profile-info {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     .main-nav ul {
         flex-direction: column;
@@ -238,20 +256,20 @@ a:hover {
     }
     .main-nav li {
         margin-left: 0;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
     .name {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
     .site-header, .main-container {
-        padding-left: 10px; /* 左右の余白をさらに狭く */
+        padding-left: 10px;
         padding-right: 10px;
     }
     .work-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* モバイルでより詰める */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 2px;
     }
     .overlay-title {
-        font-size: 1.1rem; /* モバイルではフォントサイズを小さく */
+        font-size: 1.1rem;
     }
 }
