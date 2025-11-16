@@ -1,152 +1,257 @@
 /* リセットと基本設定 */
- {
+* {
     box-sizing: border-box;
-    /* ドロップシャドウ・角丸を排除するデザインのため、border-radius: 0; を暗黙的に適用 */
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000; /* 全体を黒基調に */
-    color: #fff; /* テキストは白 */
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* リンクとタイポグラフィ */
 a {
     color: inherit;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #999; /* ホバーで少しグレーに */
+    color: #888;
 }
 
-/* ヘッダーデザイン */
-.header {
+/* ヘッダーセクション */
+.site-header {
     width: 100%;
-    padding: 25px 50px;
-    border-bottom: 1px solid #333; /* 細い区切り線 */
+    padding: 80px 50px 0;
+    margin-bottom: 50px;
 }
 
-.header-inner {
+.header-content {
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-.site-title {
-    font-size: 2.2rem;
+.profile-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.name {
+    font-size: 3.5rem;
     font-weight: 700;
-    letter-spacing: 0.1em; /* 間隔を広くとる */
-    margin: 0;
+    line-height: 1;
+    margin-bottom: 15px;
+    letter-spacing: -0.05em;
 }
 
-.nav-menu .nav-item {
-    font-size: 0.9rem;
-    margin-left: 30px;
+.profile-info p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.contact-email {
+    margin-top: 20px;
     font-weight: 500;
 }
 
-.menu-icon {
-    /* ハンバーガーメニューは今回は非表示（モバイル対応時に使用） */
-    display: none; 
+.main-nav {
+    flex-basis: auto;
+    padding-top: 10px;
 }
 
-/* メインコンテンツとグリッド */
-.main-content {
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 40px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding-bottom: 3px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+/* --- メインコンテンツと作品グリッドの修正 --- */
+
+.main-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 50px 0;
+    /* 左右の余白を減らす */
+    padding: 0 20px 80px; 
 }
 
 .work-grid {
     display: grid;
-    /* 2列のグリッド。カラム幅を柔軟に設定 */
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
-    gap: 1px; /* グリッド間の境界線を細くする */
-    border-top: 1px solid #333;
-    border-left: 1px solid #333;
+    /* 1列あたりの最小幅を広くし、画像を大きく見せる */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* ★修正点★: グリッド間の余白を2pxに */
+    gap: 2px; 
 }
 
-/* 作品カードデザイン */
-.work-card {
-    /* 作品間の仕切り線として機能 */
-    border-right: 1px solid #333; 
-    border-bottom: 1px solid #333;
-    overflow: hidden;
-    position: relative;
+/* 作品アイテム */
+.work-item {
+    display: flex;
+    flex-direction: column;
+    /* グリッドの余白が狭いため、アイテム自体の余白をなくす */
+    margin: 0;
+    padding: 0;
+}
+
+.work-link {
     display: block;
 }
 
-.work-image-container {
+.work-image-wrapper {
     width: 100%;
-    height: 400px; /* 高さを強調 */
+    /* ★修正点★: アスペクト比を正方形 (1:1) にする */
+    padding-bottom: 56.25%; 
     position: relative;
     overflow: hidden;
+    background-color: #e0e0e0; 
+    /* 画像下にテキストがないため、このマージンは不要か非常に小さくする */
+    margin-bottom: 0; 
 }
 
-.work-card img {
+.work-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
-/* ホバーエフェクト */
-.work-card:hover img {
-    transform: scale(1.05); /* ホバーで画像を少し拡大 */
-    opacity: 0.8;
+.work-link:hover .work-image-wrapper img {
+    transform: scale(1.05);
 }
 
-/* テキストオーバーレイ */
-.work-text-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+/* 画像がない場合のスタイル */
+.work-image-wrapper.no-image {
+    background-color: #0000FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-image-text {
     color: #fff;
-}
-
-.work-text-overlay h3 {
-    font-size: 1.5rem;
-    margin: 0;
+    font-size: 1.2rem;
     font-weight: 700;
+    letter-spacing: 0.1em;
 }
 
-.work-text-overlay p {
+/* --- ホバーオーバーレイのスタイル追加 --- */
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 半透明の黒背景 */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* 下に寄せる */
+    padding: 20px;
+    opacity: 0; /* デフォルトは非表示 */
+    transition: opacity 0.3s ease;
+}
+
+.work-link:hover .hover-overlay {
+    opacity: 1; /* ホバーで表示 */
+}
+
+.overlay-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.overlay-date {
     font-size: 0.9rem;
-    margin: 5px 0 0 0;
     color: #ccc;
-    /* 説明文は普段は非表示にしてホバーで出す、というのもアーティスティックな手法です */
 }
 
 
-/* フッターデザイン */
-.footer {
-    padding: 20px 0;
+/* --- 画像下に表示されていたテキストの削除 (今回はオーバーレイに集約) --- */
+/* .work-text-content, .work-title, .work-date, .work-description は削除されるため、CSSからも削除します */
+
+
+/* フッター */
+.site-footer {
     text-align: center;
-    border-top: 1px solid #333;
+    padding: 40px 0;
+    margin-top: 80px;
+    border-top: 1px solid #eee;
 }
 
 .footer-text {
     font-size: 0.8rem;
-    color: #666;
+    color: #999;
 }
 
-/* style.css の最下部に追加してください */
-
-/* 画像がない場合のスタイル */
-.work-image-container.no-image {
-    background-color: #0000FF; /* 青色で塗りつぶし */
-    /* no-imageの場合は、テキストをより見やすくするために調整しても良い */
-    display: flex; /* テキストオーバーレイを中央に配置する場合 */
-    align-items: flex-end; /* 下端に寄せる */
-    justify-content: flex-start; /* 左端に寄せる */
+/* レスポンシブ対応 */
+@media (max-width: 900px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .profile-info {
+        margin-bottom: 30px;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .name {
+        font-size: 2.8rem;
+    }
+    .site-header, .main-container {
+        padding-left: 10px; /* 左右の余白をさらに狭く */
+        padding-right: 10px;
+    }
+    .work-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* モバイルでより詰める */
+        gap: 2px;
+    }
+    .overlay-title {
+        font-size: 1.1rem; /* モバイルではフォントサイズを小さく */
+    }
 }
