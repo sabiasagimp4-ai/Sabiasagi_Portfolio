@@ -34,5 +34,32 @@
         "imageUrl": "assets/images/いえない _ ひらぎ feat.初音ミク.png",
         "linkUrl": "Works/detail.html?id=4",
         "date": "2025-08-30"
+    },
+    {
+        "id": 5,
+        "title": "AGITATOR / team「煽動」【#VocaDuo2025】",
+        "description": "VocDuo 2025にて担当した楽曲です。",
+        "youtubeUrl": "https://youtu.be/CQF9YzHPCck?si=TnWqG-8BNnFYrqLc",
+        "imageUrl": "assets/images/AGITATOR.png",
+        "linkUrl": "Works/detail.html?id=5",
+        "date": "2025-07-01"
+    },
+    {
+        "id": 6,
+        "title": "⬡ emission * emulation / feat.■37",
+        "description": "VocDuo 2025にて担当した楽曲です。空間CGはミヤオウさん(https://x.com/memememeoww)に制作していただきました。",
+        "youtubeUrl": "https://youtu.be/9OZBrzCR6E0?si=0XyVgD0ZqeH6NAJ3",
+        "imageUrl": "assets/images/emission _ emulation _ feat.■37.png",
+        "linkUrl": "Works/detail.html?id=6",
+        "date": "2025-07-01"
+    },
+    {
+        "id": 7,
+        "title": "トマソン / ナースロボ＿タイプT",
+        "description": "ボカコレ2025夏にて担当した楽曲です。",
+        "youtubeUrl": "https://youtu.be/j6wgWURtHPc?si=56K8mTBHC4Gefdyl",
+        "imageUrl": "assets/images/トマソン _ ナースロボ＿タイプT.png",
+        "linkUrl": "Works/detail.html?id=7",
+        "date": "2025-08-25"
     }
 ]
