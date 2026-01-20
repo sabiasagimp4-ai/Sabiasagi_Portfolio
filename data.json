@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "DREAM SODA(feat.雨宮みやび)/しおばにら",
-        "description": "Karureにて担当した楽曲です。",
+        "description": "Karureにて担当した映像です。",
         "youtubeUrl": "https://youtu.be/TiRkeyinJ_U?si=2jy_1FkO667pLMi1",
         "imageUrl": "assets/images/DREAM SODA (feat.雨宮みやび) _ しおばにら.png",
         "linkUrl": "Works/detail.html?id=1",
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "title": "ハイパーベンチレイション _ RADWIMPS (𝗰𝗼𝘃𝗲𝗿)_yoei.",
-        "description": "Karureにて担当した楽曲です。",
+        "description": "Karureにて担当した映像です。",
         "youtubeUrl": "https://youtu.be/dpJbGBAhfI0?si=lpLbBf8sC5WgzpTs",
         "imageUrl": "assets/images/ハイパーベンチレイション _ RADWIMPS (𝗰𝗼𝘃𝗲𝗿) _ yoei..png",
         "linkUrl": "Works/detail.html?id=2",
@@ -20,7 +20,7 @@
     {
         "id": 3,
         "title": "Inuyama Nekomi - ふかしにおどり (feat.重音テトSV)",
-        "description": "Karureにて担当した楽曲です。",
+        "description": "Karureにて担当した映像です。",
         "youtubeUrl": "https://youtu.be/MDbAkVO-a9o?si=gNGPI95OdhB9hlx1",
         "imageUrl": "assets/images/Inuyama Nekomi - ふかしにおどり (feat.重音テトSV).png",
         "linkUrl": "Works/detail.html?id=3",
@@ -29,7 +29,7 @@
     {
         "id": 4,
         "title": "いえない/ひらぎ feat.初音ミク",
-        "description": "Karureにて担当した楽曲です。",
+        "description": "Karureにて担当した映像です。",
         "youtubeUrl": "https://youtu.be/SuP_gK4q2a8?si=zTYil4JBhU2IMyRp",
         "imageUrl": "assets/images/いえない _ ひらぎ feat.初音ミク.png",
         "linkUrl": "Works/detail.html?id=4",
@@ -38,7 +38,7 @@
     {
         "id": 5,
         "title": "AGITATOR / team「煽動」【#VocaDuo2025】",
-        "description": "VocDuo 2025にて担当した楽曲です。",
+        "description": "VocDuo 2025にて担当した映像です。",
         "youtubeUrl": "https://youtu.be/CQF9YzHPCck?si=TnWqG-8BNnFYrqLc",
         "imageUrl": "assets/images/AGITATOR.png",
         "linkUrl": "Works/detail.html?id=5",
@@ -47,7 +47,7 @@
     {
         "id": 6,
         "title": "⬡ emission * emulation / feat.■37",
-        "description": "VocDuo 2025にて担当した楽曲です。空間CGはミヤオウさん(https://x.com/memememeoww)に制作していただきました。",
+        "description": "VocDuo 2025にて担当した映像です。空間CGはミヤオウさん(https://x.com/memememeoww)に制作していただきました。",
         "youtubeUrl": "https://youtu.be/9OZBrzCR6E0?si=0XyVgD0ZqeH6NAJ3",
         "imageUrl": "assets/images/emission _ emulation _ feat.■37.png",
         "linkUrl": "Works/detail.html?id=6",
@@ -61,5 +61,32 @@
         "imageUrl": "assets/images/トマソン _ ナースロボ＿タイプT.png",
         "linkUrl": "Works/detail.html?id=7",
         "date": "2025-08-25"
-    }
+    },
+    {
+        "id": 8,
+        "title": "それが希望だって信じてた。（cover）",
+        "description": "Karureにて担当した映像です。",
+        "youtubeUrl": "https://youtu.be/L1TbdiZtiVU?si=yuB3QENX-f_BSdA2",
+        "imageUrl": "assets/images/それが希望だって信じてた。(cover).png",
+        "linkUrl": "Works/detail.html?id=8",
+        "date": "2025-12-20"
+    },
+    {
+        "id": 9,
+        "title": "Karure First Reel",
+        "description": "Karureにて担当した映像です。3D環境を作りました。",
+        "youtubeUrl": "https://youtu.be/kaPCpfWGP38?si=G57Cb4TuWxfiet3u",
+        "imageUrl": "assets/images/Karurefirstreel.jpg",
+        "linkUrl": "Works/detail.html?id=9",
+        "date": "2025-04-05"
+    },     
+    {
+        "id": 10,
+        "title": "madeleine (feat.日和) / しおばにら",
+        "description": "Karureにて担当した映像です。3D環境を作りました。",
+        "youtubeUrl": "https://youtu.be/ur0RYBqtMKg?si=obWAtLrz_yIOIPjV",
+        "imageUrl": "assets/images/madeleine (feat.日和) _ しおばにら.png",
+        "linkUrl": "Works/detail.html?id=10",
+        "date": "2025-05-31"
+    }       
 ]
