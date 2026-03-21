@@ -83,10 +83,38 @@
     {
         "id": 10,
         "title": "madeleine (feat.日和) / しおばにら",
-        "description": "Karureにて担当した映像です。3D環境を作りました。",
+        "description": "Karureにて担当した映像です。Youmiと混ざってます",
         "youtubeUrl": "https://youtu.be/ur0RYBqtMKg?si=obWAtLrz_yIOIPjV",
         "imageUrl": "assets/images/madeleine (feat.日和) _ しおばにら.png",
         "linkUrl": "Works/detail.html?id=10",
         "date": "2025-05-31"
-    }       
+    },
+    {
+        "id": 11,
+        "title": "星海クロニクル / 初音ミク",
+        "description": "Karureにて担当した映像です。最初の方を制作しました",
+        "youtubeUrl": "https://www.youtube.com/watch?v=wdKmH2qD824",
+        "imageUrl": "assets/images/星海クロニクル.png",
+        "linkUrl": "Works/detail.html?id=11",
+        "date": " 2026-03-09"
+    },
+    {
+        "id": 12,
+        "title": "星海クロニクル / 初音ミク",
+        "description": "Karureにて担当した映像です。シャウト部分を制作しました",
+        "youtubeUrl": "https://www.youtube.com/watch?v=4kWRr1O5o0I",
+        "imageUrl": "assets/images/熊乃ベアトリーチェ「SIGNAL ROAD」 [Music Video] (prod. Yuto (Earthists.)) 0-39 screenshot.png",
+        "linkUrl": "Works/detail.html?id=12",
+        "date": " 2026-01-16"
+    },
+    {
+        "id": 13,
+        "title": "uni / 梓川（Visualizer）",
+        "description": "Karureにて担当した映像です。サビを制作しました",
+        "youtubeUrl": "https://www.youtube.com/watch?v=_hSuKAXSm58",
+        "imageUrl": "assets/images/uni.png",
+        "linkUrl": "Works/detail.html?id=13",
+        "date": " 2026-02-20"
+    }
+                
 ]
