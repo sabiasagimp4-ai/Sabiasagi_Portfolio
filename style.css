@@ -1,143 +1,176 @@
-/* リセットと基本設定 */
+/* リセット */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --orange: #FF3A00;
+    --black: #0F0F0F;
+    --white: #F2F2EE;
+    --border: 2px solid #0F0F0F;
+}
+
 body {
     font-family: 'IBM Plex Sans', Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: var(--white);
+    color: var(--black);
     line-height: 1.6;
     overflow-x: hidden;
-    
-    /* ★修正点★: 固定ヘッダーのためのパディングを削除 */
-    padding-top: 0; 
+    padding-top: 0;
 }
 
 a {
     color: inherit;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
-a:hover {
-    color: #888;
-}
-
-/* ★ヘッダーセクション (固定解除)★ */
+/* ===== HEADER ===== */
 .site-header {
+    background-color: var(--black);
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: 4px solid var(--orange);
+    position: static;
+    top: auto;
+    z-index: auto;
     width: 100%;
-    /* ★修正点★: 固定解除 (デフォルトの状態に戻す) */
-    position: static; 
-    top: auto; 
-    z-index: auto; 
-    background-color: #f8f8f8; 
-    
-    /* 元の padding と margin-bottom に戻す */
-    padding: 80px 50px 0; 
-    margin-bottom: 50px; 
 }
 
 .header-content {
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
+    padding: 0 48px;
     flex-wrap: wrap;
-    /* 固定解除に伴い、追加した padding-bottom と border-bottom を削除 */
-    padding-bottom: 0; 
-    border-bottom: none; 
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 .profile-info {
     flex: 1;
     min-width: 280px;
+    padding: 40px 48px 40px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .name {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.04em;
     line-height: 1;
-    margin-bottom: 15px;
-    letter-spacing: -0.05em;
+    margin-bottom: 14px;
+    text-transform: uppercase;
 }
 
 .profile-info p {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     line-height: 1.5;
     margin-bottom: 5px;
-    color: #555;
+    color: rgba(255, 255, 255, 0.35);
+    letter-spacing: 0.04em;
 }
 
 .contact-email {
-    margin-top: 20px;
-    font-weight: 500;
+    margin-top: 8px;
+    font-weight: 400;
 }
 
 .main-nav {
     flex-basis: auto;
-    padding-top: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px 0 40px 48px;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
+    gap: 40px;
+    flex-direction: row;
 }
 
 .main-nav li {
-    margin-left: 40px;
+    margin-left: 0;
 }
 
 .nav-link {
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    padding-bottom: 3px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: rgba(255, 255, 255, 0.55);
+    padding-bottom: 0;
     position: relative;
+    text-transform: uppercase;
+    transition: color 0.2s;
 }
 
 .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
+    display: none;
+}
+
+.nav-link:hover {
+    color: var(--orange);
+}
+
+/* ===== SECTION BAR ===== */
+.section-bar {
+    display: flex;
+    align-items: center;
+    padding: 14px 48px;
+    border-bottom: var(--border);
+    gap: 16px;
+}
+
+.section-bar-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.section-bar-line {
+    flex: 1;
     height: 1px;
-    background-color: #333;
-    transition: width 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
-.nav-link:hover::after {
-    width: 100%;
+.section-bar-count {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: rgba(0, 0, 0, 0.3);
 }
 
-
-/* --- メインコンテンツと作品グリッド (画像重視) --- */
-
+/* ===== MAIN CONTAINER ===== */
 .main-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    /* 左右の余白を狭くする */
-    padding: 0 20px 80px; 
+    max-width: 100%;
+    margin: 0;
+    padding: 0 0 0;
 }
 
+/* ===== WORK GRID ===== */
 .work-grid {
     display: grid;
-    /* 1列あたりの最小幅を広くし、画像を大きく見せる */
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    /* グリッド間の余白を2pxに */
-    gap: 2px; 
+    gap: 0;
+    border-left: var(--border);
+    border-top: var(--border);
 }
 
-/* 作品アイテム */
 .work-item {
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
+    border-right: var(--border);
+    border-bottom: var(--border);
 }
 
 .work-link {
@@ -146,12 +179,11 @@ a:hover {
 
 .work-image-wrapper {
     width: 100%;
-    /* 16:9 のアスペクト比 */
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%;
     position: relative;
     overflow: hidden;
-    background-color: #e0e0e0; 
-    margin-bottom: 0; 
+    background-color: var(--black);
+    margin-bottom: 0;
 }
 
 .work-image-wrapper img {
@@ -161,115 +193,197 @@ a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .work-link:hover .work-image-wrapper img {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
-/* 画像がない場合のスタイル */
+/* 画像なしプレースホルダー */
 .work-image-wrapper.no-image {
-    background-color: #0000FF;
+    background-color: var(--black);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .no-image-text {
-    color: #fff;
-    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
 }
 
-/* --- ホバーオーバーレイのスタイル --- */
+/* 作品番号ラベル */
+.work-number {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
 
+/* ===== ホバーオーバーレイ ===== */
 .hover-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
-    color: #fff;
+    background-color: var(--orange);
+    color: var(--black);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; 
-    padding: 20px;
-    opacity: 0; 
-    transition: opacity 0.3s ease;
+    justify-content: flex-end;
+    padding: 24px;
+    opacity: 0;
+    transition: opacity 0.22s ease;
 }
 
 .work-link:hover .hover-overlay {
-    opacity: 1; 
+    opacity: 1;
 }
 
 .overlay-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    line-height: 1.2;
 }
 
 .overlay-date {
-    font-size: 0.9rem;
-    color: #ccc;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
 }
 
-
-/* フッター */
+/* ===== FOOTER ===== */
 .site-footer {
-    text-align: center;
-    padding: 40px 0;
-    margin-top: 80px;
-    border-top: 1px solid #eee;
+    border-top: 4px solid var(--black);
+    background-color: var(--black);
+    padding: 28px 48px;
+    margin-top: 0;
+    text-align: left;
 }
 
 .footer-text {
-    font-size: 0.8rem;
-    color: #999;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.25);
+    letter-spacing: 0.1em;
 }
 
-/* レスポンシブ対応 */
+/* ===== PAGE CONTENT (ABOUT / CONTACT) ===== */
+.page-content {
+    padding: 80px 48px;
+    max-width: 800px;
+}
+
+.page-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.page-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 14px;
+    max-width: 60ch;
+    line-height: 1.7;
+}
+
+.contact-email-large {
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: var(--black) !important;
+    margin-top: 24px !important;
+    letter-spacing: -0.01em;
+}
+
+/* ===== レスポンシブ ===== */
 @media (max-width: 900px) {
-    /* 固定解除に伴い、モバイルの body パディングも削除 */
     body {
         padding-top: 0;
     }
 
-    .site-header {
-        /* モバイルでのヘッダーパディングを調整 */
-        padding: 30px 10px 0; 
-        margin-bottom: 30px;
+    .header-content {
+        padding: 0 20px;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
     .profile-info {
-        margin-bottom: 15px;
+        padding: 24px 0 16px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        width: 100%;
+        min-width: 0;
     }
-    .main-nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .main-nav li {
-        margin-left: 0;
-        margin-bottom: 8px;
-    }
+
     .name {
         font-size: 2.5rem;
     }
-    .site-header, .main-container {
-        padding-left: 10px;
-        padding-right: 10px;
+
+    .main-nav {
+        padding: 16px 0 24px;
     }
+
+    .main-nav ul {
+        gap: 24px;
+        flex-direction: row;
+    }
+
+    .main-nav li {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .section-bar {
+        padding: 12px 20px;
+    }
+
+    .main-container {
+        padding: 0;
+    }
+
     .work-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 2px;
+        grid-template-columns: 1fr;
+        border-left: none;
+        border-top: var(--border);
     }
+
+    .work-item {
+        border-left: none;
+        border-right: none;
+    }
+
     .overlay-title {
         font-size: 1.1rem;
+    }
+
+    .page-content {
+        padding: 40px 20px;
+    }
+
+    .page-content h2 {
+        font-size: 2rem;
+    }
+
+    .site-footer {
+        padding: 24px 20px;
     }
 }

@@ -17,19 +17,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 return dateB - dateA; // 降順ソート
             });
 
-            works.forEach(work => {
+            // works count in section bar
+            const countEl = document.getElementById('works-count');
+            if (countEl) countEl.textContent = works.length + ' works';
+
+            works.forEach((work, index) => {
                 const workItem = document.createElement('div');
                 workItem.classList.add('work-item');
 
-                // link.target を削除することで、同じタブで詳細ページに遷移するように修正
                 const link = document.createElement('a');
                 link.href = work.linkUrl;
-                // link.target = '_blank'; // 外部サイトではないため削除
                 link.rel = 'noopener noreferrer';
                 link.classList.add('work-link');
 
                 const imageWrapper = document.createElement('div');
                 imageWrapper.classList.add('work-image-wrapper');
+
+                // 番号ラベル
+                const workNumber = document.createElement('span');
+                workNumber.classList.add('work-number');
+                workNumber.textContent = String(index + 1).padStart(3, '0');
+                imageWrapper.appendChild(workNumber);
 
                 if (work.imageUrl && work.imageUrl.trim() !== "") {
                     const image = document.createElement('img');
@@ -44,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     imageWrapper.appendChild(placeholderText);
                 }
 
-                // ★★★ ホバーオーバーレイの生成 ★★★
                 const hoverOverlay = document.createElement('div');
                 hoverOverlay.classList.add('hover-overlay');
 
@@ -54,18 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const overlayDate = document.createElement('p');
                 overlayDate.classList.add('overlay-date');
-                // YYYY.MM.DD 形式に整形
                 const formattedDate = new Date(work.date).toLocaleDateString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '.');
                 overlayDate.textContent = formattedDate;
 
                 hoverOverlay.appendChild(overlayTitle);
                 hoverOverlay.appendChild(overlayDate);
-                imageWrapper.appendChild(hoverOverlay); // 画像ラッパーに追加
-                // ★★★ ホバーオーバーレイの生成 終わり ★★★
+                imageWrapper.appendChild(hoverOverlay);
 
-                // ★画像下のテキストを生成していた古いロジックは全て削除されています★
-
-                link.appendChild(imageWrapper); // 画像ラッパーをリンクに追加
+                link.appendChild(imageWrapper);
                 workItem.appendChild(link);
                 workGrid.appendChild(workItem);
             });
