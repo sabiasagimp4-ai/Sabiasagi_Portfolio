@@ -1,46 +1,151 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabiasagi - Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.PNG">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Sabiasagi — motion designer / visual creator. Selected works, experiments and contact.">
+  <title>Sabiasagi — Motion / Visual</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="minimal-artistic">
+<body>
+  <canvas id="motion-field" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span>VIEW</span></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-    <header class="site-header">
-        <div class="header-content">
-            <div class="profile-info">
-                <h1 class="name">Sabiasagi</h1>
-                <p class="contact-email">sabiasagi.mp4@gmail.com</p>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" class="nav-link">WORKS</a></li>
-                    <li><a href="about.html" class="nav-link">ABOUT</a></li>
-                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-                </ul>
-            </nav>
+  <header class="site-header">
+    <a class="brand magnetic" href="#top" aria-label="Sabiasagi home">
+      <span class="brand-mark">SA</span>
+      <span class="brand-text">SABIASAGI</span>
+    </a>
+    <div class="header-status">
+      <span class="status-dot"></span>
+      <span>VISUAL / MOTION</span>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="magnetic" href="#works">WORKS</a>
+      <a class="magnetic" href="#about">ABOUT</a>
+      <a class="magnetic" href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-meta hero-meta-left mono">
+        <span>PORTFOLIO / 2026</span>
+        <span>TOKYO, JP</span>
+      </div>
+      <div class="hero-meta hero-meta-right mono">
+        <span>IMAGE / MOTION / CG</span>
+        <span>SCROLL TO EXPLORE</span>
+      </div>
+
+      <div class="hero-title-wrap" id="hero-title">
+        <div class="hero-line hero-line-a" data-speed="0.08">
+          <span class="outline">SABIA</span><span>SAGI</span>
         </div>
-    </header>
+        <div class="hero-line hero-line-b" data-speed="-0.06">
+          <span>MOTION</span><span class="slash">/</span><span class="outline">VISUAL</span>
+        </div>
+      </div>
 
-    <div class="section-bar">
-        <span class="section-bar-label">Works</span>
-        <span class="section-bar-line"></span>
-        <span class="section-bar-count" id="works-count"></span>
+      <div class="hero-orbit" aria-hidden="true">
+        <svg viewBox="0 0 160 160" role="img">
+          <defs>
+            <path id="orbitPath" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/>
+          </defs>
+          <text>
+            <textPath href="#orbitPath">MOTION DESIGN — VISUAL EXPERIMENT — CG — </textPath>
+          </text>
+        </svg>
+        <div class="orbit-core">+</div>
+      </div>
+
+      <p class="hero-intro reveal">
+        映像、モーショングラフィックス、CG。<br>
+        画面の中で「気持ちいい違和感」をつくる。
+      </p>
+
+      <a class="scroll-cue magnetic" href="#works" aria-label="作品を見る">
+        <span class="scroll-cue-label mono">SELECTED WORKS</span>
+        <span class="scroll-cue-arrow">↘</span>
+      </a>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>MOTION GRAPHICS</span><i>✳</i><span>CG</span><i>✳</i><span>MUSIC VIDEO</span><i>✳</i><span>VISUAL DESIGN</span><i>✳</i><span>EXPERIMENTS</span><i>✳</i>
+        <span>MOTION GRAPHICS</span><i>✳</i><span>CG</span><i>✳</i><span>MUSIC VIDEO</span><i>✳</i><span>VISUAL DESIGN</span><i>✳</i><span>EXPERIMENTS</span><i>✳</i>
+      </div>
     </div>
 
-    <main class="main-container">
-        <div id="work-grid" class="work-grid">
+    <section class="works-section" id="works" aria-labelledby="works-title">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-kicker mono">01 / SELECTED OUTPUT</span>
+          <h2 id="works-title">WORKS<span class="accent-dot">.</span></h2>
         </div>
-    </main>
+        <div class="works-meta mono">
+          <span id="works-count">— WORKS</span>
+          <span>NEWEST → OLDEST</span>
+        </div>
+      </div>
 
-    <footer class="site-footer">
-        <p class="footer-text">&copy; 2025 Sabiasagi. All Rights Reserved.</p>
-    </footer>
+      <div class="work-grid" id="work-grid" aria-live="polite"></div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="statement" aria-label="Creative statement">
+      <div class="statement-line" data-marquee="left">MAKE THE FRAME MOVE / MAKE THE EYE STOP /</div>
+      <div class="statement-line outline-text" data-marquee="right">SYSTEM × ACCIDENT × RHYTHM /</div>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-kicker mono">02 / PROFILE</span>
+          <h2 id="about-title">ABOUT<span class="accent-dot">.</span></h2>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="about-lead">Sabiasagi is a visual creator working across motion graphics, music video and CG.</p>
+          <p>映像制作チーム Karure での制作を含め、音楽映像を中心にモーション・画面設計・CGを制作しています。完成形だけでなく、エフェクトや表現手法そのものを試作することも好きです。</p>
+        </div>
+        <div class="capability-list reveal">
+          <div><span class="mono">01</span><strong>MOTION DESIGN</strong></div>
+          <div><span class="mono">02</span><strong>MUSIC VIDEO</strong></div>
+          <div><span class="mono">03</span><strong>CG / 3D</strong></div>
+          <div><span class="mono">04</span><strong>VISUAL EXPERIMENT</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <span class="section-kicker mono reveal">03 / CONTACT</span>
+      <h2 id="contact-title" class="contact-title reveal">
+        <span>LET'S MAKE</span>
+        <span class="outline-text">SOMETHING</span>
+        <span>MOVE.</span>
+      </h2>
+      <div class="contact-row reveal">
+        <a class="contact-mail magnetic" href="mailto:sabiasagi.mp4@gmail.com">sabiasagi.mp4@gmail.com ↗</a>
+        <a class="contact-github magnetic" href="https://github.com/sabiasagimp4-ai" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer mono">
+    <span>© 2026 SABIASAGI</span>
+    <span>BUILT ON GITHUB PAGES</span>
+    <a class="magnetic" href="#top">BACK TO TOP ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
