@@ -3,149 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#0a0a0a">
-  <meta name="description" content="Sabiasagi — motion designer / visual creator. Selected works, experiments and contact.">
-  <title>Sabiasagi — Motion / Visual</title>
+  <meta name="theme-color" content="#526780">
+  <meta name="description" content="Sabiasagiのポートフォリオ。音楽映像、モーショングラフィックス、CGの制作作品。">
+  <title>Sabiasagi — 映像と、その余韻。</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.PNG">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <canvas id="motion-field" aria-hidden="true"></canvas>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="cursor" aria-hidden="true"><span>VIEW</span></div>
-  <div class="scroll-progress" aria-hidden="true"><span></span></div>
-
+<body id="top">
+  <a class="skip-link" href="#works">作品へ移動</a>
   <header class="site-header">
-    <a class="brand magnetic" href="#top" aria-label="Sabiasagi home">
-      <span class="brand-mark">SA</span>
-      <span class="brand-text">SABIASAGI</span>
-    </a>
-    <div class="header-status">
-      <span class="status-dot"></span>
-      <span>VISUAL / MOTION</span>
-    </div>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a class="magnetic" href="#works">WORKS</a>
-      <a class="magnetic" href="#about">ABOUT</a>
-      <a class="magnetic" href="#contact">CONTACT</a>
+    <a class="brand" href="index.html" aria-label="Sabiasagi ホーム">sabiasagi<span class="brand-period">.</span></a>
+    <nav class="main-nav" aria-label="メインナビゲーション">
+      <a href="#works">作品</a><a href="#about">私について</a><a href="#contact">連絡先</a>
     </nav>
   </header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-meta hero-meta-left mono">
-        <span>PORTFOLIO / 2026</span>
-        <span>TOKYO, JP</span>
+  <main>
+    <section class="opening" aria-labelledby="opening-title">
+      <div class="opening-heading">
+        <p class="eyebrow">MOTION / VISUAL / CG</p>
+        <h1 id="opening-title">Sabiasagi</h1>
+        <p class="opening-note">映像と、その余韻。</p>
       </div>
-      <div class="hero-meta hero-meta-right mono">
-        <span>IMAGE / MOTION / CG</span>
-        <span>SCROLL TO EXPLORE</span>
-      </div>
-
-      <div class="hero-title-wrap" id="hero-title">
-        <div class="hero-line hero-line-a" data-speed="0.08">
-          <span class="outline">SABIA</span><span>SAGI</span>
-        </div>
-        <div class="hero-line hero-line-b" data-speed="-0.06">
-          <span>MOTION</span><span class="slash">/</span><span class="outline">VISUAL</span>
-        </div>
-      </div>
-
-      <div class="hero-orbit" aria-hidden="true">
-        <svg viewBox="0 0 160 160" role="img">
-          <defs>
-            <path id="orbitPath" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/>
-          </defs>
-          <text>
-            <textPath href="#orbitPath">MOTION DESIGN — VISUAL EXPERIMENT — CG — </textPath>
-          </text>
-        </svg>
-        <div class="orbit-core">+</div>
-      </div>
-
-      <p class="hero-intro reveal">
-        映像、モーショングラフィックス、CG。<br>
-        画面の中で「気持ちいい違和感」をつくる。
-      </p>
-
-      <a class="scroll-cue magnetic" href="#works" aria-label="作品を見る">
-        <span class="scroll-cue-label mono">SELECTED WORKS</span>
-        <span class="scroll-cue-arrow">↘</span>
-      </a>
+      <p class="margin-note" aria-hidden="true">光のあとを、たどる。</p>
+      <figure class="opening-work" id="work-11">
+        <a href="Works/detail.html?id=11" class="image-link" aria-label="星海クロニクル / 初音ミク — 作品を見る">
+          <img src="assets/images/星海クロニクル.png" width="1280" height="720" alt="青い雲の間に光の軌跡が伸びる、星海クロニクルの一場面" fetchpriority="high">
+          <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+        </a>
+        <figcaption><span>星海クロニクル / 初音ミク</span><time datetime="2026-03-09">2026.03</time></figcaption>
+      </figure>
+      <figure class="opening-echo" id="work-8">
+        <a href="Works/detail.html?id=8" class="image-link" aria-label="それが希望だって信じてた。（cover） — 作品を見る">
+          <img src="assets/images/それが希望だって信じてた。(cover).png" width="1920" height="1080" alt="光と青い影に包まれた人物の、手描きの一場面" loading="lazy" decoding="async">
+          <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+        </a>
+        <figcaption>それが希望だって信じてた。（cover）<time datetime="2025-12-20">2025.12</time></figcaption>
+      </figure>
+      <a class="opening-scroll" href="#works"><span>作品をたどる</span><span class="long-arrow" aria-hidden="true">↙</span></a>
+      <p class="opening-edition">SELECTED WORKS<br>2025 — 2026</p>
     </section>
-
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>MOTION GRAPHICS</span><i>✳</i><span>CG</span><i>✳</i><span>MUSIC VIDEO</span><i>✳</i><span>VISUAL DESIGN</span><i>✳</i><span>EXPERIMENTS</span><i>✳</i>
-        <span>MOTION GRAPHICS</span><i>✳</i><span>CG</span><i>✳</i><span>MUSIC VIDEO</span><i>✳</i><span>VISUAL DESIGN</span><i>✳</i><span>EXPERIMENTS</span><i>✳</i>
-      </div>
-    </div>
 
     <section class="works-section" id="works" aria-labelledby="works-title">
-      <div class="section-head reveal">
-        <div>
-          <span class="section-kicker mono">01 / SELECTED OUTPUT</span>
-          <h2 id="works-title">WORKS<span class="accent-dot">.</span></h2>
-        </div>
-        <div class="works-meta mono">
-          <span id="works-count">— WORKS</span>
-          <span>NEWEST → OLDEST</span>
-        </div>
+      <div class="works-heading">
+        <h2 id="works-title">残る、場面。</h2>
+        <p class="eyebrow">WORKS <span id="works-count">/ 13</span></p>
       </div>
-
-      <div class="work-grid" id="work-grid" aria-live="polite"></div>
-    </section>
-
-    <section class="statement" aria-label="Creative statement">
-      <div class="statement-line" data-marquee="left">MAKE THE FRAME MOVE / MAKE THE EYE STOP /</div>
-      <div class="statement-line outline-text" data-marquee="right">SYSTEM × ACCIDENT × RHYTHM /</div>
+      <div class="work-field" id="work-field">
+        <!-- WORKS_START -->
+        <article class="work" id="work-13">
+          <span class="work-number" aria-hidden="true">03</span>
+          <div class="work-media"><a class="image-link" href="Works/detail.html?id=13" aria-label="uni / 梓川（Visualizer） — 作品を見る">
+            <img src="assets/images/uni.png" width="1920" height="1080" alt="uni / 梓川（Visualizer） の一場面" loading="lazy" decoding="async">
+            <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+          </a></div>
+          <div class="work-caption"><h3 class="work-title"><a href="Works/detail.html?id=13">uni / 梓川（Visualizer）</a></h3><time datetime="2026-02-20">2026.02</time></div>
+        </article>
+        <article class="work" id="work-1">
+          <span class="work-number" aria-hidden="true">04</span>
+          <div class="work-media"><a class="image-link" href="Works/detail.html?id=1" aria-label="DREAM SODA(feat.雨宮みやび)/しおばにら — 作品を見る">
+            <img src="assets/images/DREAM SODA (feat.雨宮みやび) _ しおばにら.png" width="1920" height="1080" alt="DREAM SODA(feat.雨宮みやび)/しおばにら の一場面" loading="lazy" decoding="async">
+            <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+          </a></div>
+          <div class="work-caption"><h3 class="work-title"><a href="Works/detail.html?id=1">DREAM SODA(feat.雨宮みやび)/しおばにら</a></h3><time datetime="2025-11-15">2025.11</time></div>
+        </article>
+        <article class="work" id="work-2">
+          <span class="work-number" aria-hidden="true">05</span>
+          <div class="work-media"><a class="image-link" href="Works/detail.html?id=2" aria-label="ハイパーベンチレイション _ RADWIMPS (𝗰𝗼𝘃𝗲𝗿)_yoei. — 作品を見る">
+            <img src="assets/images/ハイパーベンチレイション _ RADWIMPS (𝗰𝗼𝘃𝗲𝗿) _ yoei..png" width="1920" height="1080" alt="ハイパーベンチレイション _ RADWIMPS (𝗰𝗼𝘃𝗲𝗿)_yoei. の一場面" loading="lazy" decoding="async">
+            <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+          </a></div>
+          <div class="work-caption"><h3 class="work-title"><a href="Works/detail.html?id=2">ハイパーベンチレイション _ RADWIMPS (𝗰𝗼𝘃𝗲𝗿)_yoei.</a></h3><time datetime="2025-11-04">2025.11</time></div>
+        </article>
+        <article class="work" id="work-3">
+          <span class="work-number" aria-hidden="true">06</span>
+          <div class="work-media"><a class="image-link" href="Works/detail.html?id=3" aria-label="Inuyama Nekomi - ふかしにおどり (feat.重音テトSV) — 作品を見る">
+            <img src="assets/images/Inuyama Nekomi - ふかしにおどり (feat.重音テトSV).png" width="1920" height="1080" alt="Inuyama Nekomi - ふかしにおどり (feat.重音テトSV) の一場面" loading="lazy" decoding="async">
+            <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+          </a></div>
+          <div class="work-caption"><h3 class="work-title"><a href="Works/detail.html?id=3">Inuyama Nekomi - ふかしにおどり (feat.重音テトSV)</a></h3><time datetime="2025-08-30">2025.08</time></div>
+        </article>
+        <article class="work" id="work-4">
+          <span class="work-number" aria-hidden="true">07</span>
+          <div class="work-media"><a class="image-link" href="Works/detail.html?id=4" aria-label="いえない/ひらぎ feat.初音ミク — 作品を見る">
+            <img src="assets/images/いえない _ ひらぎ feat.初音ミク.png" width="1920" height="1080" alt="いえない/ひらぎ feat.初音ミク の一場面" loading="lazy" decoding="async">
+            <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+          </a></div>
+          <div class="work-caption"><h3 class="work-title"><a href="Works/detail.html?id=4">いえない/ひらぎ feat.初音ミク</a></h3><time datetime="2025-08-30">2025.08</time></div>
+        </article>
+        <article class="work" id="work-7">
+          <span class="work-number" aria-hidden="true">08</span>
+          <div class="work-media"><a class="image-link" href="Works/detail.html?id=7" aria-label="トマソン / ナースロボ＿タイプT — 作品を見る">
+            <img src="assets/images/トマソン _ ナースロボ＿タイプT.png" width="1920" height="1080" alt="トマソン / ナースロボ＿タイプT の一場面" loading="lazy" decoding="async">
+            <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+          </a></div>
+          <div class="work-caption"><h3 class="work-title"><a href="Works/detail.html?id=7">トマソン / ナースロボ＿タイプT</a></h3><time datetime="2025-08-25">2025.08</time></div>
+        </article>
+        <article class="work" id="work-6">
+          <span class="work-number" aria-hidden="true">09</span>
+          <div class="work-media"><a class="image-link" href="Works/detail.html?id=6" aria-label="⬡ emission * emulation / feat.■37 — 作品を見る">
+            <img src="assets/images/emission _ emulation _ feat.■37.png" width="1920" height="1080" alt="⬡ emission * emulation / feat.■37 の一場面" loading="lazy" decoding="async">
+            <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+          </a></div>
+          <div class="work-caption"><h3 class="work-title"><a href="Works/detail.html?id=6">⬡ emission * emulation / feat.■37</a></h3><time datetime="2025-07-01">2025.07</time></div>
+        </article>
+        <article class="work" id="work-10">
+          <span class="work-number" aria-hidden="true">10</span>
+          <div class="work-media"><a class="image-link" href="Works/detail.html?id=10" aria-label="madeleine (feat.日和) / しおばにら — 作品を見る">
+            <img src="assets/images/madeleine (feat.日和) _ しおばにら.png" width="1920" height="1080" alt="madeleine (feat.日和) / しおばにら の一場面" loading="lazy" decoding="async">
+            <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+          </a></div>
+          <div class="work-caption"><h3 class="work-title"><a href="Works/detail.html?id=10">madeleine (feat.日和) / しおばにら</a></h3><time datetime="2025-05-31">2025.05</time></div>
+        </article>
+        <article class="work" id="work-5">
+          <span class="work-number" aria-hidden="true">11</span>
+          <div class="work-media"><a class="image-link" href="Works/detail.html?id=5" aria-label="AGITATOR / team「煽動」【#VocaDuo2025】 — 作品を見る">
+            <img src="assets/images/AGITATOR.png" width="1920" height="1080" alt="AGITATOR / team「煽動」【#VocaDuo2025】 の一場面" loading="lazy" decoding="async">
+            <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+          </a></div>
+          <div class="work-caption"><h3 class="work-title"><a href="Works/detail.html?id=5">AGITATOR / team「煽動」【#VocaDuo2025】</a></h3><time datetime="2025-07-01">2025.07</time></div>
+        </article>
+        <article class="work" id="work-12">
+          <span class="work-number" aria-hidden="true">12</span>
+          <div class="work-media"><a class="image-link" href="Works/detail.html?id=12" aria-label="星海クロニクル / 初音ミク — 作品を見る">
+            <img src="assets/images/熊乃ベアトリーチェ「SIGNAL ROAD」 [Music Video] (prod. Yuto (Earthists.)) 0-39 screenshot.png" width="1920" height="1080" alt="星海クロニクル / 初音ミク の一場面" loading="lazy" decoding="async">
+            <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+          </a></div>
+          <div class="work-caption"><h3 class="work-title"><a href="Works/detail.html?id=12">星海クロニクル / 初音ミク</a></h3><time datetime="2026-01-16">2026.01</time></div>
+        </article>
+        <article class="work" id="work-9">
+          <span class="work-number" aria-hidden="true">13</span>
+          <div class="work-media"><a class="image-link" href="Works/detail.html?id=9" aria-label="Karure First Reel — 作品を見る">
+            <img src="assets/images/Karurefirstreel.jpg" width="1919" height="1008" alt="Karure First Reel の一場面" loading="lazy" decoding="async">
+            <span class="image-invitation">作品を見る <span aria-hidden="true">↗</span></span>
+          </a></div>
+          <div class="work-caption"><h3 class="work-title"><a href="Works/detail.html?id=9">Karure First Reel</a></h3><time datetime="2025-04-05">2025.04</time></div>
+        </article>
+        <!-- WORKS_END -->
+      </div>
     </section>
 
     <section class="about-section" id="about" aria-labelledby="about-title">
-      <div class="section-head reveal">
-        <div>
-          <span class="section-kicker mono">02 / PROFILE</span>
-          <h2 id="about-title">ABOUT<span class="accent-dot">.</span></h2>
-        </div>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-copy reveal">
-          <p class="about-lead">Sabiasagi is a visual creator working across motion graphics, music video and CG.</p>
-          <p>映像制作チーム Karure での制作を含め、音楽映像を中心にモーション・画面設計・CGを制作しています。完成形だけでなく、エフェクトや表現手法そのものを試作することも好きです。</p>
-        </div>
-        <div class="capability-list reveal">
-          <div><span class="mono">01</span><strong>MOTION DESIGN</strong></div>
-          <div><span class="mono">02</span><strong>MUSIC VIDEO</strong></div>
-          <div><span class="mono">03</span><strong>CG / 3D</strong></div>
-          <div><span class="mono">04</span><strong>VISUAL EXPERIMENT</strong></div>
-        </div>
+      <p class="section-index">ABOUT / 01</p>
+      <div class="about-name"><h2 id="about-title">Sabiasagi<span>さびあさぎ</span></h2><span class="affiliation">Visual creator / Karure</span></div>
+      <div class="about-copy">
+        <p>音楽映像を中心に、<br>モーション、画面設計、CGを制作しています。</p>
+        <p>映像制作チーム Karure での制作を含め、<br class="desktop-break">エフェクトや表現手法そのものも試作しています。</p>
+        <p class="tools-note">After Effects / Illustrator / Blender</p>
       </div>
     </section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
-      <span class="section-kicker mono reveal">03 / CONTACT</span>
-      <h2 id="contact-title" class="contact-title reveal">
-        <span>LET'S MAKE</span>
-        <span class="outline-text">SOMETHING</span>
-        <span>MOVE.</span>
-      </h2>
-      <div class="contact-row reveal">
-        <a class="contact-mail magnetic" href="mailto:sabiasagi.mp4@gmail.com">sabiasagi.mp4@gmail.com ↗</a>
-        <a class="contact-github magnetic" href="https://github.com/sabiasagimp4-ai" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+      <p class="section-index">CONTACT / 02</p>
+      <div class="contact-copy"><h2 id="contact-title">お便りはこちらへ。</h2>
+        <a class="contact-mail" href="mailto:sabiasagi.mp4@gmail.com">sabiasagi.mp4@gmail.com<span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="https://github.com/sabiasagimp4-ai" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer mono">
-    <span>© 2026 SABIASAGI</span>
-    <span>BUILT ON GITHUB PAGES</span>
-    <a class="magnetic" href="#top">BACK TO TOP ↑</a>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer class="site-footer"><span>© 2026 Sabiasagi</span><a href="#top">ページのはじめへ ↑</a></footer>
 </body>
 </html>
