@@ -1,43 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品詳細 - Sabiasagi</title>
-    <link rel="icon" type="image/png" href="../assets/images/favicon.PNG">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../work-detail.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#d7d8e0">
+  <meta name="description" content="Sabiasagiの映像作品と制作について。">
+  <title>作品 — Sabiasagi</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../work-detail.css">
+  <script src="detail.js" defer></script>
 </head>
-<body class="minimal-artistic">
-
-    <header class="site-header">
-        <div class="header-content">
-            <div class="profile-info">
-                <h1 class="name">Sabiasagi</h1>
-                <p class="contact-email">sabiasagi.mp4@gmail.com</p>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="../index.html" class="nav-link">WORKS</a></li> 
-                    <li><a href="../about.html" class="nav-link">ABOUT</a></li>
-                    <li><a href="../contact.html" class="nav-link">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="main-container work-detail-page">
-        <a href="../index.html" class="back-link">&larr; Back to Works</a>
-
-        <div id="work-detail-content">
-        </div>
-    </main>
-
-    <footer class="site-footer">
-        <p class="footer-text">&copy; 2025 Sabiasagi. All Rights Reserved.</p>
-    </footer>
-
-    <script src="detail.js"></script>
+<body class="standalone">
+  <a class="skip-link" href="#work-detail-content">作品へ移動</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html">sabiasagi<span class="brand-period">.</span></a>
+    <nav class="main-nav" aria-label="メインナビゲーション"><a href="../index.html#works">作品</a><a href="../about.html">私について</a><a href="../contact.html">連絡先</a></nav>
+  </header>
+  <main class="work-detail-page">
+    <a href="../index.html#works" class="back-link" id="back-to-work">← 作品に戻る</a>
+    <div id="work-detail-content" aria-live="polite" aria-busy="true"><p>作品を読み込んでいます。</p></div>
+    <noscript><p>作品詳細の表示にはJavaScriptが必要です。<a class="text-link" href="../index.html#works">作品一覧に戻る</a></p></noscript>
+  </main>
+  <footer class="site-footer"><span>© 2026 Sabiasagi</span><a href="../index.html#works">作品一覧へ</a></footer>
 </body>
 </html>

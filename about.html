@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT - Sabiasagi</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.PNG">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#d7d8e0">
+  <meta name="description" content="Sabiasagiのポートフォリオ。音楽映像、モーショングラフィックス、CGの制作作品。">
+  <title>私について — Sabiasagi</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="minimal-artistic">
-
-    <header class="site-header">
-        <div class="header-content">
-            <div class="profile-info">
-                <h1 class="name">Sabiasagi</h1>
-                <p class="contact-email">sabiasagi.mp4@gmail.com</p>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" class="nav-link">WORKS</a></li>
-                    <li><a href="about.html" class="nav-link">ABOUT</a></li>
-                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="main-container">
-        <div class="page-content">
-            <h2>Sabiasagi</h2>
-            <p>Adobe After Effects/Illsutrator や Blender を使用して映像を制作しています。</p>
-        </div>
-    </main>
-
-    <footer class="site-footer">
-        <p class="footer-text">&copy; 2025 Sabiasagi. All Rights Reserved.</p>
-    </footer>
-    
+<body class="standalone">
+  <a class="skip-link" href="#about">本文へ移動</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Sabiasagi ホーム">sabiasagi<span class="brand-period">.</span></a>
+    <nav class="main-nav" aria-label="メインナビゲーション">
+      <a href="index.html#works">作品</a><a href="about.html" aria-current="page">私について</a><a href="contact.html">連絡先</a>
+    </nav>
+  </header>
+  <main>
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <p class="section-index">ABOUT / 01</p>
+      <div class="about-name"><h1 id="about-title">Sabiasagi<span>さびあさぎ</span></h1><span class="affiliation">Visual creator / Karure</span></div>
+      <div class="about-copy">
+        <p>音楽映像を中心に、<br>モーション、画面設計、CGを制作しています。</p>
+        <p>映像制作チーム Karure での制作を含め、<br class="desktop-break">エフェクトや表現手法そのものも試作しています。</p>
+        <p class="tools-note">After Effects / Illustrator / Blender</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>© 2026 Sabiasagi</span><a href="index.html#works">作品一覧へ</a></footer>
 </body>
 </html>
